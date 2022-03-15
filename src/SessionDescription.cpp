@@ -14,45 +14,11 @@ std::shared_ptr<SessionDescription> SessionDescription::parse(const std::string&
 
 	if (!rule)
 	{
-		
-		
 		std::cout << context.getErrorStack().front()<< "\n";
-		std::cout << context.text<< "\n";
-		std::cout << context.getErrorIndex()<< "\n";
-		std::cout << context.getErrorStack().front() << "\n";
-		
-		throw new abnf::ParserException(
-			"rule \"" + (std::string) context.getErrorStack().front() + "\" failed",
-			context.text,
-			context.getErrorIndex(),
-			context.getErrorStack());
+		return nullptr;
 	}
 	
 
-	/*if (context.text.length() > context.index)
-	{
-		ParserException primaryError =
-			new ParserException(
-					"extra data found",
-					context.text,
-					context.index,
-					new Stack<std::string>());
-
-		if (context.getErrorIndex() > context.index)
-		{
-			ParserException secondaryError =
-				new ParserException(
-						"rule \"" + (std::string) context.getErrorStack().peek() + "\" failed",
-						context.text,
-						context.getErrorIndex(),
-						context.getErrorStack());
-!=
-			primaryError.initCause(secondaryError);
-		}
-
-		throw primaryError;
-	}
-	*/
 	
 	//Create builder
 	SessionDescriptionBuilder builder;
