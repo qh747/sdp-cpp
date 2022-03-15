@@ -1,5 +1,5 @@
 add_subdirectory(abnf)
-add_library(builders)
+add_subdirectory(builders)
 
 # Make an automatic library - will be static or dynamic based on user setting
 add_library(sdp-cpp SessionDescription.cpp)
