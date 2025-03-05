@@ -37,3 +37,6 @@
 
 .idea/*
 cmake-build-debug/*
+bin/*
+bin/sdps/*
+lib/*
