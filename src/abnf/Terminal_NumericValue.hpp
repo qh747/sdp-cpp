@@ -13,7 +13,7 @@
 
 #include <string>
 #include <vector>
-
+#include <cstdint>
 #include "Rule.hpp"
 
 namespace abnf {

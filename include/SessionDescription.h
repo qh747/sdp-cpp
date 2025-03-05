@@ -22,7 +22,7 @@ public:
 	static SessionDescription::shared parse(const std::string& string);
 
 public:	
-	SessionDescription(int version = 0);
+	explicit SessionDescription(int version = 0);
 	~SessionDescription() = default;
 	
 	SessionDescription::shared clone();
@@ -154,7 +154,7 @@ public:
 	MediaDescription::shared getMediaById(const std::string& id);
 	
 private:
-	int version;
+	int version = 0;
 	Origin::shared origin;
 	std::string uri;
 	SessionName::shared sessionName;

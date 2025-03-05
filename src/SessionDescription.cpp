@@ -1,6 +1,6 @@
+#include <iostream>
 #include "SessionDescription.h"
 #include "abnf/ParserContext.hpp"
-#include "abnf/ParserException.hpp"
 #include "abnf/Rule_session_description.hpp"
 #include "builders/SessionDescriptionBuilder.h"
 
@@ -17,8 +17,6 @@ std::shared_ptr<SessionDescription> SessionDescription::parse(const std::string&
 		std::cout << context.getErrorStack().front()<< "\n";
 		return nullptr;
 	}
-	
-
 	
 	//Create builder
 	SessionDescriptionBuilder builder;

@@ -34,3 +34,6 @@
 /src/abnf/Displayer.hpp
 /src/abnf/XmlDisplayer.cpp
 /src/abnf/XmlDisplayer.hpp
+
+.idea/*
+cmake-build-debug/*

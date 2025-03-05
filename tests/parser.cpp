@@ -15,7 +15,6 @@
 #include "SCTPMapAttribute.h"
 #include <iostream>
 #include <fstream>
-#include <streambuf>
 
 using namespace sdp;
 

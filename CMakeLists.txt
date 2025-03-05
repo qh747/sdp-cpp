@@ -7,6 +7,10 @@ project(SdpCpp
   DESCRIPTION "An sdp parser used cpp"
   LANGUAGES CXX)
 
+# set library generate path
+set(LIBRARY_PATH ${CMAKE_SOURCE_DIR}/lib)
+set(HEADER_PATH ${CMAKE_SOURCE_DIR}/include)
+
 # Only do these if this is the main project, and not if it is included through add_subdirectory
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 
@@ -16,9 +20,13 @@ if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   set(CMAKE_POSITION_INDEPENDENT_CODE True)
   # Let's ensure -std=c++xx instead of -std=g++xx
   set(CMAKE_CXX_EXTENSIONS OFF)
+  set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 endif()
 
+set(LIBRARY_OUTPUT_PATH ${LIBRARY_PATH})
+
 # The compiled library code is here
 add_subdirectory(src)
+add_subdirectory(tests)
 

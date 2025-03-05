@@ -1,5 +1,7 @@
 file(GLOB SOURCES_LIST CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp")
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 # Make an automatic library - will be static or dynamic based on user setting
 add_library(builders ${SOURCES_LIST})
 
