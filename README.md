@@ -1,14 +1,18 @@
 # sdp++
-ABNF C++ SDP library
+1. origin link: https://gitee.com/taoweitao/sdp-cpp.git
+2. modified file CMakeLists.txt
+3. library generated in sdp-cpp/lib
+4. binary file generated in sdp-cpp/bin
 
 ## Compile
 
-Just download source code and:
 ```
-make -j 4 -f Makefile CONF=Release
+1. cmake -B build
+2. cmake --build build -j4
 ```
 
-The library should be then availeble at `dist/Release/<arch>/libsdp-cpp.so`
+The library should be then availeble at `lib/libsdp-cpp.a  lib/libabnf.a   lib/libbuilders.a`
+The binary file should be then availeble at `bin/Parser`
 
 ## Usage 
 

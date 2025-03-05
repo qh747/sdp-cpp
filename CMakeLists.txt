@@ -9,6 +9,7 @@ project(SdpCpp
 
 # set library generate path
 set(LIBRARY_PATH ${CMAKE_SOURCE_DIR}/lib)
+set(BINARY_PATH ${CMAKE_SOURCE_DIR}/bin)
 set(HEADER_PATH ${CMAKE_SOURCE_DIR}/include)
 
 # Only do these if this is the main project, and not if it is included through add_subdirectory
